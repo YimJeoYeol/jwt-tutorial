@@ -9,7 +9,7 @@ spring:
 
 
       hibernate:
-        ddl-auto: update
+        ddl-auto: create
       show-sql: true
       properties:
         hibernate:
@@ -19,10 +19,10 @@ spring:
           use_sql_comments: true
 
 jwt:
-  header: Authorization
+  #header: Authorization
   #HS512 알고리즘을 사용할 것이기 때문에 512bit, 즉 64byte 이상의 secret key를 사용해야 한다.
-  #echo 'silvernine-tech-spring-boot-jwt-tutorial-secret-silvernine-tech-spring-boot-jwt-tutorial-secret'|base64
-  secret: c2lsdmVybmluZS10ZWNoLXNwcmluZy1ib290LWp3dC10dXRvcmlhbC1zZWNyZXQtc2lsdmVybmluZS10ZWNoLXNwcmluZy1ib290LWp3dC10dXRvcmlhbC1zZWNyZXQK
+  #echo: 'silvernine-tech-spring-boot-jwt-tutorial-secret-silvernine-tech-spring-boot-jwt-tutorial-secret'#|base64
+  secret: 00b77f8674950da809f7ba66c2ee98155980027e75d137fc51a133d0ef9d0224877b866f89b57eb766f6254dc61e42b2ab27d47e14a49ed0db029f2531a1508d #NGxW_GlE1KNdYrnks9Akh-xZbFrAhWFWKLRV97J922RNj2mcd-pR1fdcfL_Jg4SD
   token-validity-in-seconds: 86400
 server:
   port: 8989
